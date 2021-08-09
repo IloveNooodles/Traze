@@ -1,5 +1,70 @@
+body {
+  margin: 0;
+}
 .login-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: #072351;
+  min-height: 100vh;
+  color: white;
+}
+
+.login-wrapper a {
+  text-decoration: none;
+  color: #4099e0;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 50vw;
+}
+
+.form-wrapper input {
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  border: solid 2px white;
+  color: white;
+}
+
+.form-wrapper a {
+  font-size: 14px;
+}
+
+.form-wrapper input:focus,
+.form-wrapper input:active {
+  outline: 0;
+  border: 2px solid white;
+}
+
+.submit {
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+  background-color: #ddd8c6;
+}
+
+.logoTraze {
+  max-height: 40vw;
+  margin: 0 auto;
+}
+
+.judul {
+  color: #ddd8c6;
+}
+
+.logo-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.logo-wrapper img {
+  width: 32px;
+  height: 32px;
 }

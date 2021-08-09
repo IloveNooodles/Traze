@@ -1,0 +1,21 @@
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbar:focus,
+#searchbar:active {
+  outline: 0;
+  border: 2px solid white;
+}
+
+#searchbar {
+  background-color: #072351;
+  border-radius: 20px;
+  min-width: 80vw;
+  padding: 8px;
+  margin-top: 5px;
+  border: solid 2px white;
+  color: white;
+}

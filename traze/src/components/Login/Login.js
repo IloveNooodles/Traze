@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './Login.css';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Logo from "../../img/logo.png";
+import Twit from "../../img/twit.png";
+import Google from "../../img/google.png";
+import Facebook from "../../img/facebook.png";
+import "./Login.css";
 
 async function loginUser(creds) {
-  return fetch('http://localhost:8000/login', {
-    method: 'POST',
+  return fetch("http://localhost:8000/login", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(creds),
   }).then((data) => data.json());
@@ -27,23 +31,35 @@ const Login = ({ setToken }) => {
 
   return (
     <div className="login-wrapper">
+      <img src={Logo} alt="Logo Traze" className="logoTraze" />
       <form onSubmit={handleSubmit}>
-        <label>
-          <h1>Login Page</h1>
-          <p>Username</p>
-          <input type="text" onChange={(e) => setUserName(e.target.value)} />
-        </label>
-        <label>
-          <p>Password</p>
+        <div className="form-wrapper">
+          <h2 className="judul">Sign In</h2>
+          <input
+            type="text"
+            onChange={(e) => setUserName(e.target.value)}
+            placeholder="Username"
+          />
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
           />
-        </label>
-        <div>
-          <button type="submit">Submit</button>
+          <a href="#">Forgot password ?</a>
+          <button type="submit" className="submit">
+            Login
+          </button>
         </div>
       </form>
+      <p>Or login with</p>
+      <div className="logo-wrapper">
+        <img src={Twit} alt="" />
+        <img src={Google} alt="" />
+        <img src={Facebook} alt="" />
+      </div>
+      <p>
+        Don't have account? <a href="#">Sign Up Now</a>
+      </p>
     </div>
   );
 };

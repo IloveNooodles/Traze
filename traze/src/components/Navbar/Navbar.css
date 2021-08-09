@@ -1,0 +1,10 @@
+.nav-wrap {
+  background-color: #072351;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-wrap img {
+  max-width: 40vw;
+}

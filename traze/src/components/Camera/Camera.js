@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+
+import "./Camera.css";
 
 export class CameraFeed extends Component {
   /**
@@ -46,25 +48,25 @@ export class CameraFeed extends Component {
    */
   takePhoto = () => {
     const { sendFile } = this.props;
-    const context = this.canvas.getContext('2d');
+    const context = this.canvas.getContext("2d");
     context.drawImage(this.videoPlayer, 0, 0, 200, 200);
     this.canvas.toBlob(sendFile);
   };
 
   render() {
     return (
-      <div>
-        <div>
+      <div className="wrapper">
+        <div className="video">
           <video
             ref={(ref) => (this.videoPlayer = ref)}
-            width="200"
-            heigh="200"
+            width="500"
+            heigh="500"
           />
         </div>
         <button className="btn" onClick={this.takePhoto}>
-          Take photo!
+          <div className="red-circle"></div>
         </button>
-        <div>
+        <div className="resultVideo">
           <canvas width="200" height="200" ref={(ref) => (this.canvas = ref)} />
         </div>
       </div>
