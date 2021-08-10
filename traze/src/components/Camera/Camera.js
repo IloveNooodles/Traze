@@ -1,75 +1,63 @@
-import React, { Component } from "react";
+import React, { useState } from 'react';
+import Webcam from 'react-webcam';
+import './Camera.css';
 
-import "./Camera.css";
+const WebcamComponent = () => <Webcam />;
 
-export class CameraFeed extends Component {
-  /**
-   * Processes available devices and identifies one by the label
-   * @memberof CameraFeed
-   * @instance
-   */
-  processDevices(devices) {
-    devices.forEach((device) => {
-      console.log(device.label);
-      this.setDevice(device);
-    });
-  }
+const videoConstraints = {
+  width: 370,
+  height: 550,
+  facingMode: 'user',
+};
 
-  /**
-   * Sets the active device and starts playing the feed
-   * @memberof CameraFeed
-   * @instance
-   */
-  async setDevice(device) {
-    const { deviceId } = device;
-    const stream = await navigator.mediaDevices.getUserMedia({
-      audio: false,
-      video: { deviceId },
-    });
-    this.videoPlayer.srcObject = stream;
-    this.videoPlayer.play();
-  }
+export const WebcamCapture = () => {
+  const [image, setImage] = useState('');
+  const webcamRef = React.useRef(null);
 
-  /**
-   * On mount, grab the users connected devices and process them
-   * @memberof CameraFeed
-   * @instance
-   * @override
-   */
-  async componentDidMount() {
-    const cameras = await navigator.mediaDevices.enumerateDevices();
-    this.processDevices(cameras);
-  }
+  const capture = React.useCallback(() => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    setImage(imageSrc);
+  });
 
-  /**
-   * Handles taking a still image from the video feed on the camera
-   * @memberof CameraFeed
-   * @instance
-   */
-  takePhoto = () => {
-    const { sendFile } = this.props;
-    const context = this.canvas.getContext("2d");
-    context.drawImage(this.videoPlayer, 0, 0, 200, 200);
-    this.canvas.toBlob(sendFile);
-  };
-
-  render() {
-    return (
-      <div className="wrapper">
-        <div className="video">
-          <video
-            ref={(ref) => (this.videoPlayer = ref)}
-            width="500"
-            heigh="500"
+  return (
+    <div className="wrapper">
+      <div className="video">
+        {image == '' ? (
+          <Webcam
+            audio={false}
+            width={370}
+            height={550}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            videoConstraints={videoConstraints}
           />
-        </div>
-        <button className="btn" onClick={this.takePhoto}>
-          <div className="red-circle"></div>
-        </button>
-        <div className="resultVideo">
-          <canvas width="200" height="200" ref={(ref) => (this.canvas = ref)} />
-        </div>
+        ) : (
+          <img className="resultVideo" src={image} />
+        )}
       </div>
-    );
-  }
-}
+      <div>
+        {image != '' ? (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setImage('');
+            }}
+            className="btn"
+          >
+            <div className="green-circle"></div>
+          </button>
+        ) : (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              capture();
+            }}
+            className="btn"
+          >
+            <div className="red-circle"></div>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};

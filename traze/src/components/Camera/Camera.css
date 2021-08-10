@@ -3,13 +3,21 @@
   flex-direction: column;
   background-color: #072351;
   align-items: center;
-  min-height: 100vh;
-  border-radius: 5%;
+  justify-content: center;
+  /* min-height: 100vh; */
+  /* border-radius: 5%; */
+  height: 569.59px;
 }
 
 .video video {
-  width: 300px;
-  height: 300px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.resultVideo {
+  width: 390px;
+  height: 570px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -19,6 +27,10 @@
   border: 0.5px solid white;
   background: #072351;
   display: grid;
+  position: absolute;
+  bottom: 30px;
+  right: 175px;
+  text-align: center;
   place-items: center;
 }
 
@@ -29,7 +41,9 @@
   background: #ea4335;
 }
 
-.resultVideo canvas {
-  margin: 10px;
-  padding: 10px;
+.green-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #29e019;
 }
