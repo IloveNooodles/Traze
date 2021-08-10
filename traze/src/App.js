@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Searchbar />
-      <CameraFeed sendFile={uploadImage} />
+      {/* <Searchbar />
+      <CameraFeed sendFile={uploadImage} /> */}
     </div>
   );
 }
