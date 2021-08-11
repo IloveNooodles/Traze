@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Login from "./components/Login/Login";
+import Login from "./pages/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
-import History from "./components/History/History";
-import Leaderboard from "./components/Leaderboard/Leaderboard";
+import Profile from "./pages/Profile/Profile";
+import History from "./pages/History/History";
+import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import Searchbar from "./components/Searchbar/Searchbar";
 import { WebcamCapture } from "./components/Camera/Camera";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   // const [token, setToken] = useState();
@@ -16,12 +17,17 @@ function App() {
 
   return (
     <div className="App">
-      <Leaderboard></Leaderboard>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/"></Route>
+        </Switch>
+      </Router>
+      {/* <Leaderboard></Leaderboard> */}
       {/* <History /> */}
       {/* <Profile /> */}
-      {/* <Navbar /> */}
-      {/* <Searchbar />
-      <CameraFeed sendFile={uploadImage} /> */}
+      {/* <Searchbar /> */}
+      {/* <CameraFeed sendFile={uploadImage} />} */}
     </div>
   );
 }

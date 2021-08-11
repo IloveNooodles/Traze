@@ -1,21 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../img/logo.png";
 import HamIcon from "../../img/Hamburger_icon.svg.png";
+import { Link } from "react-router-dom";
+import { SidebarData } from "./SidebarData";
 
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <div className="nav-wrap">
       <div className="img-wrap">
         <img src={Logo} alt="Ini Logo" id="logoTraze" />
-        <img src={HamIcon} alt="logo hamburger icon" id="hamicon" />
+        <Link to="#" className="menu-bars">
+          <img
+            src={HamIcon}
+            alt="logo hamburger icon"
+            id="hamicon"
+            onClick={showSidebar}
+          />
+        </Link>
       </div>
-      <div id="mylinks">
-        <a href="#">Home</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">History</a>
-        <a href="#">Profile</a>
+      <div className="navbar">
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <ul className="nav-menu-items">
+            {SidebarData.map((item) => {
+              return (
+                <li key={item.id} className={item.cName}>
+                  <Link to={item.path}>
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
     </div>
   );
