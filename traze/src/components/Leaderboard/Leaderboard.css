@@ -1,0 +1,10 @@
+.leaderboard{
+  min-height: 100vh;
+  background-color: #072351;
+  font-family: Poppins;
+  color: #ddd8c6;
+}
+
+.leaderboard h2{
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+.History {
+  min-height: 100vh;
+  background-color: #072351;
+  font-family: Poppins;
+  color: #ddd8c6;
+}
+
+.container-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-history img {
+  width: 7em;
+}
+
+.container-history h3 {
+  margin-top: 0.25em;
+  font-size: 1.5em;
+}
+
+.container-text-history {
+  width: 70vw;
+  min-height: 55vh;
+  border-radius: 1em;
+  background-color: #22477f;
+  margin: 0 auto;
+}
+
+.text-info-history p {
+  margin: 0 0 0 1em;
+}
+
+.text-top {
+  padding-top: 0.5em;
+}
+
+.haritanggal-info {
+  display: flex;
+}
+
+.haritanggal-info p {
+  margin: 0 0 0 1em;
+}

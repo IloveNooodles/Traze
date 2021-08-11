@@ -1,18 +1,32 @@
 .nav-wrap {
   background-color: #072351;
-
 }
 
-.img-wrap{
+.img-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .nav-wrap img {
-  max-width: 40vw;
+  max-width: 30vw;
 }
 
-#hamicon{
-  width: 10vw;
+#logoTraze {
+  margin-left: 2em;
+}
+
+#hamicon {
+  width: 8vw;
+  margin-right: 2em;
+}
+
+#mylinks {
+  display: flex;
+  flex-direction: column;
+}
+
+#mylinks a {
+  text-decoration: none;
+  color: #ddd8c6;
 }

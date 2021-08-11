@@ -8,9 +8,15 @@ const Navbar = () => {
   return (
     <div className="nav-wrap">
       <div className="img-wrap">
-        <img src={Logo} alt="Ini Logo" />
+        <img src={Logo} alt="Ini Logo" id="logoTraze" />
+        <img src={HamIcon} alt="logo hamburger icon" id="hamicon" />
       </div>
-      <img src={HamIcon} alt="logo hamburger icon" id="hamicon" />
+      <div id="mylinks">
+        <a href="#">Home</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">History</a>
+        <a href="#">Profile</a>
+      </div>
     </div>
   );
 };
