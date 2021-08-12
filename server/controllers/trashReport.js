@@ -1,4 +1,6 @@
 import express from 'express';
+import mongoose from 'mongoose';
+import trashReport from '../models/trashReport.js';
 
 import TrashReport from '../models/trashReport.js';
 
@@ -29,7 +31,7 @@ export const getReport = async (req, res) => {
 export const createReport = async (req, res) => {
     const report = req.body;
 
-    const newReport = new TrashReport({ ...report, createdAt: new Date().toISOString() })
+    const newReport = new TrashReport({ ...report, createdAt: new Date().toISOString(), username: report.username })
 
     try {
         await newReport.save();
@@ -40,4 +42,15 @@ export const createReport = async (req, res) => {
     }
 }
 
+export const deleteReport = async (req, res) => {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`Tidak ada laporan dengan id ${id}`);
+
+    await TrashReport.findByIdAndRemove(id);
+
+    res.json('Laporan berhasil dihapus');
+}
+
 export default router;
+
