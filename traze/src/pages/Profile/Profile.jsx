@@ -1,14 +1,17 @@
+import Navbar from "../../components/Navbar/Navbar";
+
 import "./Profile.css";
+
 import dummyImage from "../../img/facebook.png";
 import Settings from "../../img/setting.png";
 import Exit from "../../img/exit.png";
 import Help from "../../img/help.png";
 import Arrow from "../../img/backArrow-png";
 
+
 const Profile = () => {
   return (
     <div className="myProfile">
-      <img src={Arrow} alt="back-button" id="backbutton" />
       <div className="container-shape">
         <div id="circle">
           <img src={dummyImage} alt="" />

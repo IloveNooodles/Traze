@@ -13,23 +13,30 @@ export const SidebarData = [
   },
   {
     title: "Scoreboard",
-    path: "/Scoreboard",
+    path: "/scoreboard",
     icon: { ScoreboardIcon },
     cName: "nav-text",
     id: 2,
   },
   {
     title: "History",
-    path: "/History",
+    path: "/history",
     icon: { HistoryIcon },
     cName: "nav-text",
     id: 3,
   },
   {
     title: "Profile",
-    path: "/Profile",
+    path: "/profile",
     icon: { ProfileIcon },
     cName: "nav-text",
     id: 4,
+  },
+  {
+    title: "Login",
+    path: "/login",
+    icon: { ProfileIcon },
+    cName: "nav-text",
+    id: 5,
   },
 ];

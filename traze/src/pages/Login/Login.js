@@ -31,7 +31,6 @@ const Login = ({ setToken }) => {
 
   return (
     <div className="login-wrapper">
-      <img src={Logo} alt="Logo Traze" className="logoTraze" />
       <form onSubmit={handleSubmit}>
         <div className="form-wrapper">
           <h2 className="judul">Sign In</h2>

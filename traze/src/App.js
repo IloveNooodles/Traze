@@ -16,11 +16,15 @@ function App() {
   // }
 
   return (
-    <div className="App">
+    <>
       <Router>
-        <Navbar />
+        <Navbar></Navbar>
         <Switch>
-          <Route path="/"></Route>
+          <Route path="/" exact></Route>
+          <Route path="/history" component={History} />
+          <Route path="/scoreboard" component={Leaderboard} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/login" component={Login} />
         </Switch>
       </Router>
       {/* <Leaderboard></Leaderboard> */}
@@ -28,7 +32,7 @@ function App() {
       {/* <Profile /> */}
       {/* <Searchbar /> */}
       {/* <CameraFeed sendFile={uploadImage} />} */}
-    </div>
+    </>
   );
 }
 

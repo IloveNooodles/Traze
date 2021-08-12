@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: #072351;
   font-family: Poppins;
+  padding-top: 5em;
 }
 
 #backbutton {
@@ -51,9 +52,10 @@
 #container-menu-wrapper {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  bottom: 4em;
-  left: 2em;
+  justify-content: flex-end;
+  margin-top: 10em;
+  margin-left: 3em;
+
 }
 
 #container-menu-wrapper img {

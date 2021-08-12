@@ -1,6 +1,9 @@
 .nav-wrap {
   background-color: #072351;
   font-family: Poppins;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 2em;
 }
 
 .img-wrap {
@@ -10,7 +13,7 @@
 }
 
 .nav-wrap img {
-  max-width: 30vw;
+  width: 100px;
 }
 
 #logoTraze {
@@ -18,8 +21,8 @@
 }
 
 #hamicon {
-  width: 8vw;
-  margin-right: 1em;
+  width: 35px;
+  padding-right: 1em;
 }
 
 .menu-bars {
@@ -36,7 +39,7 @@
 .nav-menu {
   width: 175px;
   background-color: #072351;
-  height: 100vh;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   position: fixed;

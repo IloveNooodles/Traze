@@ -25,11 +25,12 @@ const Navbar = () => {
       </div>
       <div className="navbar">
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items">
+          <ul className="nav-menu-items" onClick={showSidebar}>
             {SidebarData.map((item) => {
               return (
                 <li key={item.id} className={item.cName}>
                   <Link to={item.path}>
+                    {/* <img src={item.icon} alt="inigambar" /> */}
                     <span>{item.title}</span>
                   </Link>
                 </li>

@@ -10,7 +10,6 @@ const History = () => {
 
   return (
     <div className="History">
-      <img src={Arrow} alt="" id="backbutton" />
       <div className="container-history">
         <img src={Historyimg} alt="" />
         <h3>History</h3>
