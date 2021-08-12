@@ -7,6 +7,7 @@ import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import Searchbar from "./components/Searchbar/Searchbar";
 import { WebcamCapture } from "./components/Camera/Camera";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Webcam from "react-webcam";
 
 function App() {
   // const [token, setToken] = useState();
@@ -27,11 +28,8 @@ function App() {
           <Route path="/login" component={Login} />
         </Switch>
       </Router>
-      {/* <Leaderboard></Leaderboard> */}
-      {/* <History /> */}
-      {/* <Profile /> */}
       {/* <Searchbar /> */}
-      {/* <CameraFeed sendFile={uploadImage} />} */}
+      {/* <Webcam /> */}
     </>
   );
 }

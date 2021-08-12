@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import trashRoutes from './routes/trashReports.js';
+import userRoutes from './routes/users.js';
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors());
 
 app.use('/data', trashRoutes);
+app.use('/user', userRoutes);
 
 app.get('/', (req, res) => {
     return res.send("Connected!");
