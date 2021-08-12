@@ -1,0 +1,12 @@
+.notfound{
+  min-height: 100vh;
+  background-color: #DDD8C6;
+  font-family: Poppins;
+  color: #072351;
+  padding-top: 5em;
+}
+
+.container{
+  text-align: center;
+  padding-top: 30vh;
+}
