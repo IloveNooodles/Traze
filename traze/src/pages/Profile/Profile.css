@@ -72,3 +72,10 @@
   padding: 0 1em;
   color: #ddd8c6;
 }
+
+.menu-wrapper-profile > a {
+  margin-top: 0.2em;
+  padding: 0 1em;
+  text-decoration: none;
+  color: #ddd8c6;
+}

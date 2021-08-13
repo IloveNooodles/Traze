@@ -4,6 +4,7 @@ import Settings from "../../img/setting.png";
 import Exit from "../../img/exit.png";
 import Help from "../../img/help.png";
 import Layout from "../../Layout";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -21,15 +22,15 @@ const Profile = () => {
         <div id="container-menu-wrapper">
           <div className="menu-wrapper-profile">
             <img src={Settings} alt="" />
-            <p>Settings</p>
+            <Link to="/help">Settings</Link>
           </div>
           <div className="menu-wrapper-profile">
             <img src={Help} alt="" />
-            <p>Help</p>
+            <Link to="/help">Help</Link>
           </div>
           <div className="menu-wrapper-profile">
             <img src={Exit} alt="" />
-            <p>Logout</p>
+            <Link to="/help">Logout</Link>
           </div>
         </div>
       </div>
