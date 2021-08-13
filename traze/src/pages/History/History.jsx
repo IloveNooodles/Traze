@@ -1,7 +1,7 @@
-import "./History.css";
-
 import Arrow from "../../img/backArrow-png";
 import Historyimg from "../../img/history.png";
+
+import "./History.css";
 
 const History = () => {
   const Jalan = "Jalan Merdeka";

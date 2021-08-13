@@ -51,11 +51,10 @@
 
 #container-menu-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 10em;
-  margin-left: 3em;
-
+  flex-direction:column;
+  position: absolute;
+  bottom: -8%;
+  left: 8%;
 }
 
 #container-menu-wrapper img {
