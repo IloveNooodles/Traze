@@ -5,8 +5,8 @@ const Register = () => {
   return (
     <div className="login-wrapper">
       <h2 className="judul">Sign Up</h2>
-      <div className="img-wrap img-upload">
-        <img src={Facebook} alt="Profile picture" />
+      <div className="img-wrapper img-upload">
+        <img src={Facebook} alt="Profile picture" id='profic'/>
       </div>
       {/* <form onSubmit={handleSubmit}> */}
       <form>

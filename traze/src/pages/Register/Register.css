@@ -70,9 +70,18 @@ h4 {
   margin-block-end: 0;
 }
 
-img {
+#profic{
+  width: 100px;
+  height: 100px;
+}
+
+.img-wrapper {
+  margin-bottom: 20px;
+}
+
+/* .img-wrap > img {
   width: 100px;
   height: 100px;
   overflow: hidden;
   border-radius: 50%;
-}
+} */
