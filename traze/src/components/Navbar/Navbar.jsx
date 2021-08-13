@@ -30,8 +30,9 @@ const Navbar = () => {
               return (
                 <li key={item.id} className={item.cName}>
                   <Link to={item.path}>
-                    {/* <img src={item.icon} alt="inigambar" /> */}
-                    <span>{item.title}</span>
+                    <strong>
+                      <span>{item.title}</span>
+                    </strong>
                   </Link>
                 </li>
               );

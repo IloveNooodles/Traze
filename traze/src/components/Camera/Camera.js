@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Webcam from 'react-webcam';
-import './Camera.css';
+import React, { useState } from "react";
+import Webcam from "react-webcam";
+import "./Camera.css";
 
 const WebcamComponent = () => <Webcam />;
 
 const videoConstraints = {
   width: 370,
   height: 550,
-  facingMode: 'user',
+  facingMode: "user",
 };
 
-export const WebcamCapture = () => {
-  const [image, setImage] = useState('');
+const WebcamCapture = () => {
+  const [image, setImage] = useState("");
   const webcamRef = React.useRef(null);
 
   const capture = React.useCallback(() => {
@@ -22,7 +22,7 @@ export const WebcamCapture = () => {
   return (
     <div className="wrapper">
       <div className="video">
-        {image == '' ? (
+        {image == "" ? (
           <Webcam
             audio={false}
             width={370}
@@ -36,11 +36,11 @@ export const WebcamCapture = () => {
         )}
       </div>
       <div>
-        {image != '' ? (
+        {image != "" ? (
           <button
             onClick={(e) => {
               e.preventDefault();
-              setImage('');
+              setImage("");
             }}
             className="btn"
           >
@@ -61,3 +61,5 @@ export const WebcamCapture = () => {
     </div>
   );
 };
+
+export default WebcamCapture;

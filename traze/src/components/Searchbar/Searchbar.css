@@ -7,15 +7,31 @@
 #searchbar:focus,
 #searchbar:active {
   outline: 0;
-  border: 2px solid white;
+  color: #ddd8c6;
+
 }
 
 #searchbar {
   background-color: #072351;
   border-radius: 20px;
-  min-width: 80vw;
+  width: 70vw;
   padding: 8px;
   margin-top: 5px;
-  border: solid 2px white;
-  color: white;
+  color: #ddd8c6;
+  padding-left: 15px;
+  margin-right: 10px;
+  border: 1px white solid;
+}
+
+.camera-wrapper{
+  display: flex;
+  justify-content: center;
+  background-color: #072351;
+  border-radius: 50px;
+  align-content: center;
+  padding: 5px;
+}
+
+.camera-wrapper img{
+  width: 30px;
 }

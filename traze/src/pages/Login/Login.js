@@ -31,9 +31,12 @@ const Login = ({ setToken }) => {
 
   return (
     <div className="login-wrapper">
+      <img src={Logo} alt="" id="logotraze" />
       <form onSubmit={handleSubmit}>
         <div className="form-wrapper">
-          <h2 className="judul">Sign In</h2>
+          <strong>
+            <h2 className="judul">Sign In</h2>
+          </strong>
           <input
             type="text"
             onChange={(e) => setUserName(e.target.value)}

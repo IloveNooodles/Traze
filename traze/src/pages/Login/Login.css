@@ -52,6 +52,7 @@ body {
 
 .judul {
   color: #ddd8c6;
+  font-weight: bold;
 }
 
 .logo-wrapper {
@@ -62,4 +63,8 @@ body {
 .logo-wrapper img {
   width: 32px;
   height: 32px;
+}
+
+#logotraze{
+  width: 200px;
 }

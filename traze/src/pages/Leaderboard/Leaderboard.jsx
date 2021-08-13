@@ -8,7 +8,7 @@ const Leaderboard = () => {
   return (
     <Layout>
       <div className="leaderboard">
-        <h2>Scoreboard</h2>
+        <h2>Leaderboard</h2>
         <LeaderboardScore></LeaderboardScore>
         <LeaderboardData />
         <LeaderboardData />
