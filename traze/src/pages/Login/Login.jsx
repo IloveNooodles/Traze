@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import Logo from "../../img/logo.png";
-import Twit from "../../img/twit.png";
-import Google from "../../img/google.png";
-import Facebook from "../../img/facebook.png";
-import "./Login.css";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Logo from '../../img/logo.png';
+import Twit from '../../img/twit.png';
+import Google from '../../img/google.png';
+import Facebook from '../../img/facebook.png';
+import './Login.css';
+import { Link } from 'react-router-dom';
 
 async function loginUser(creds) {
-  return fetch("http://localhost:8000/login", {
-    method: "POST",
+  return fetch('http://localhost:8000/login', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(creds),
   }).then((data) => data.json());
@@ -57,7 +58,7 @@ const Login = ({ setToken }) => {
         <img src={Facebook} alt="" />
       </div>
       <p>
-        Don't have account? <a href="#">Sign Up Now</a>
+        Don't have account? <Link to="/register">Sign Up Now</Link>
       </p>
     </div>
   );

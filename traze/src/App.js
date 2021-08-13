@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import Login from "./pages/Login/Login";
-import Navbar from "./components/Navbar/Navbar";
-import Profile from "./pages/Profile/Profile";
-import History from "./pages/History/History";
-import Leaderboard from "./pages/Leaderboard/Leaderboard";
-import page404 from "../src/pages/404page/404page";
-import Help from "./pages/Help/Help";
-import Settings from "./pages/Settings/Settings";
-import EditProfile from "./pages/EditProfile/EditProfile";
-import { WebcamCapture } from "./components/Camera/Camera";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Webcam from "react-webcam";
-import Home from "./pages/Home/Home";
+import React, { useState } from 'react';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './pages/Profile/Profile';
+import History from './pages/History/History';
+import Leaderboard from './pages/Leaderboard/Leaderboard';
+import page404 from '../src/pages/404page/404page';
+import Help from './pages/Help/Help';
+import Settings from './pages/Settings/Settings';
+import EditProfile from './pages/EditProfile/EditProfile';
+import { WebcamCapture } from './components/Camera/Camera';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Webcam from 'react-webcam';
+import Home from './pages/Home/Home';
 
 function App() {
   // const [token, setToken] = useState();
@@ -25,6 +26,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Login} />
+          <Route path="/register" component={Register} />
           <Route path="/history" component={History} />
           <Route path="/scoreboard" component={Leaderboard} />
           <Route path="/profile" component={Profile} />
