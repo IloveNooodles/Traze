@@ -1,37 +1,46 @@
 import './Register.css';
 import Facebook from '../../img/facebook.png';
+import Twit from '../../img/twit.png';
+import Google from '../../img/google.png';
+import Logo from '../../img/logo.png';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
     <div className="login-wrapper">
-      <h2 className="judul">Sign Up</h2>
-      <div className="img-wrapper img-upload">
-        <img src={Facebook} alt="Profile picture" id='profic'/>
-      </div>
+      <img src={Logo} alt="" id="logotraze" />
+      <h2 className="judul">Register</h2>
       {/* <form onSubmit={handleSubmit}> */}
       <form>
         <div className="form-wrapper">
-          <input type="file" onChange="" placeholder="Select a file..." />
-          <h4>Input your username</h4>
+          <input type="text" placeholder="Full name" />
           <input
             type="text"
             // onChange={(e) => setUserName(e.target.value)}
             placeholder="Username"
           />
-          <h4>Input your Email</h4>
           <input type="text" placeholder="Email" />
-          <h4>Input your Password</h4>
           <input
             type="password"
             // onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
           />
+          <input type="text" placeholder="Address" />
 
           <button type="submit" className="submit">
-            Sign Up
+            Submit
           </button>
         </div>
       </form>
+      <p>Or login with</p>
+      <div className="logo-wrapper">
+        <img src={Twit} alt="" />
+        <img src={Google} alt="" />
+        <img src={Facebook} alt="" />
+      </div>
+      <p>
+        Have account? <Link to="/">Log in here</Link>
+      </p>
     </div>
   );
 };
