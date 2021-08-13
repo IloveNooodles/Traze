@@ -3,7 +3,6 @@
   font-family: Poppins;
   position: fixed;
   width: 100%;
-  margin-bottom: 2em;
 }
 
 .img-wrap {
@@ -38,12 +37,12 @@
 
 .nav-menu {
   width: 175px;
-  background-color: #072351;
+  background-color: #1b345c;
   min-height: 100%;
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 10%;
+  
   right: -100%;
   transition: 800ms;
 }
