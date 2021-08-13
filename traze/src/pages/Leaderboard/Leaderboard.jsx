@@ -2,19 +2,21 @@ import "./Leaderboard.css";
 import LeaderboardData from "../../components/LeaderboardData/LeaderboardData";
 import LeaderboardScore from "../../components/LeaderboardScore/LeaderboardScore";
 
-import Arrow from "../../img/backArrow-png";
+import Layout from "../../Layout";
 
 const Leaderboard = () => {
   return (
-    <div className="leaderboard">
-      <h2>Scoreboard</h2>
-      <LeaderboardScore></LeaderboardScore>
-      <LeaderboardData />
-      <LeaderboardData />
-      <LeaderboardData />
-      <LeaderboardData />
-      <LeaderboardData />
-    </div>
+    <Layout>
+      <div className="leaderboard">
+        <h2>Scoreboard</h2>
+        <LeaderboardScore></LeaderboardScore>
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+      </div>
+    </Layout>
   );
 };
 

@@ -1,6 +1,6 @@
 .History {
   min-height: 100vh;
-  background-color: #072351;
+  background-color: #22477F;
   font-family: Poppins;
   color: #ddd8c6;
   padding-top: 5em;
@@ -22,33 +22,6 @@
 }
 
 .container-text-history {
-  width: 70vw;
-  min-height: calc(fit-content+15px);
-  border-radius: 1em;
-  background-color: #22477f;
-  margin: 0 auto;
-}
-
-.text-info-history p {
-  margin: 0 0 0 1em;
-}
-
-.text-info-history:last-child > hr {
-  display: none;
-}
-
-.text-info-history:not(:first-child) > .text-top {
-  padding: 0;
-}
-
-.text-top {
-  padding-top: 0.5em;
-}
-
-.haritanggal-info {
   display: flex;
-}
-
-.haritanggal-info p {
-  margin: 0 0 0 1em;
+  justify-content: center;
 }

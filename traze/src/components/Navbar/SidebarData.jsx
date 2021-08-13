@@ -6,7 +6,7 @@ import HistoryIcon from "../../img/history.png";
 export const SidebarData = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: { HomeIcon },
     cName: "nav-text",
     id: 1,
@@ -32,11 +32,11 @@ export const SidebarData = [
     cName: "nav-text",
     id: 4,
   },
-  {
-    title: "Login",
-    path: "/login",
-    icon: { ProfileIcon },
-    cName: "nav-text",
-    id: 5,
-  },
+  // {
+  //   title: "Login",
+  //   path: "/login",
+  //   icon: { ProfileIcon },
+  //   cName: "nav-text",
+  //   id: 5,
+  // },
 ];
