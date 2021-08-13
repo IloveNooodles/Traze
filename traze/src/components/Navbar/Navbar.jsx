@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import Logo from "../../img/logo.png";
+import LogoOfficer from "../../img/logoTrazeOfficer.png";
 import HamIcon from "../../img/Hamburger_icon.svg.png";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
+import { SidebarDataAdmin } from "./SidebarDataAdmin";
 
 import "./Navbar.css";
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+  const isAdmin = true;
+  const data = (isAdmin ? SidebarDataAdmin : SidebarData);
 
   return (
     <div className="nav-wrap">
       <div className="img-wrap">
-        <img src={Logo} alt="Ini Logo" id="logoTraze" />
+        <img
+          src={isAdmin ? LogoOfficer : Logo}
+          alt="Ini Logo"
+          id="logoTraze"
+          className={isAdmin ? "logo-admin" : ""}
+        />
         <Link to="#" className="menu-bars">
           <img
             src={HamIcon}
@@ -25,8 +34,8 @@ const Navbar = () => {
       </div>
       <div className="navbar">
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items" onClick={showSidebar}>
-            {SidebarData.map((item) => {
+          <ul className= {isAdmin ? "nav-menu-items editnavbar" : "nav-menu-items"} onClick={showSidebar}>
+            {data.map((item) => {
               return (
                 <li key={item.id} className={item.cName}>
                   <Link to={item.path}>

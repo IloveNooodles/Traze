@@ -35,3 +35,9 @@
 .camera-wrapper img{
   width: 30px;
 }
+
+.camera-wrapper img:hover{
+  cursor: pointer;
+}
+
+

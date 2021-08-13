@@ -1,6 +1,6 @@
 import React from "react";
 import Cameraimg from "../../img/Camera.png";
-import Searchimg from "../../img/search-icon-png-9972.png";
+import { Link } from "react-router-dom";
 
 import "./Searchbar.css";
 
@@ -10,9 +10,11 @@ const Searchbar = () => {
       <form action="/report/">
         <input id="searchbar" type="text" placeholder="Search..." />
       </form>
-      <div className="camera-wrapper">
-        <img src={Cameraimg} alt="" />
-      </div>
+      <Link to="/report">
+        <div className="camera-wrapper">
+          <img src={Cameraimg} alt="" />
+        </div>
+      </Link>
     </div>
   );
 };

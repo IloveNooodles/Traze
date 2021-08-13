@@ -15,6 +15,12 @@ const Leaderboard = () => {
         <LeaderboardData />
         <LeaderboardData />
         <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
+        <LeaderboardData />
       </div>
     </Layout>
   );

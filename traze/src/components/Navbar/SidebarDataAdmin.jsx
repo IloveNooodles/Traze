@@ -1,4 +1,4 @@
-export const SidebarData = [
+export const SidebarDataAdmin = [
   {
     title: "Home",
     path: "/home",
@@ -6,27 +6,21 @@ export const SidebarData = [
     id: 1,
   },
   {
-    title: "Leaderboard",
-    path: "/leaderboard",
+    title: "Mail",
+    path: "/mail",
     cName: "nav-text",
     id: 2,
-  },
-  {
-    title: "Report",
-    path: "/report",
-    cName: "nav-text",
-    id: 3,
   },
   {
     title: "History",
     path: "/history",
     cName: "nav-text",
-    id: 4,
+    id: 3,
   },
   {
     title: "Profile",
     path: "/profile",
     cName: "nav-text",
-    id: 5,
+    id: 4,
   },
 ];

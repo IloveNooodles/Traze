@@ -1,13 +1,13 @@
 import "./Profile.css";
-import dummyImage from "../../img/facebook.png";
-import Settings from "../../img/setting.png";
-import Exit from "../../img/exit.png";
-import Help from "../../img/help.png";
-import Layout from "../../Layout";
+import dummyImage from "../../../img/facebook.png";
+import Settings from "../../../img/setting.png";
+import Exit from "../../../img/exit.png";
+import Help from "../../../img/help.png";
+import Layout from "../../../Layout";
 import { Link } from "react-router-dom";
 
-const Profile = () => {
-  const name='Ziella'
+const ProfileAdmin = () => {
+  const name = "Ujang";
 
   return (
     <Layout>
@@ -18,10 +18,10 @@ const Profile = () => {
           </div>
         </div>
         <div className="text-container-profile">
-          <Link to='/editprofile'>
+          <Link to="/editprofile">
             <h2>{name}</h2>
           </Link>
-          <p>2021 Points</p>
+          <p>Officer</p>
         </div>
         <div id="container-menu-wrapper">
           <Link to="/settings">
@@ -48,4 +48,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileAdmin;
