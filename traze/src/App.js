@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import RouteManager from "./route";
+import RouteManager from './route.js';
 
 function App() {
   // const [token, setToken] = useState();
@@ -9,13 +9,11 @@ function App() {
   // if (!token) {
   //   return <Login setToken={setToken} />;
   // }
-  const loggedIn = true;
-  const isAdmin = false;
 
   return (
     <>
       <Router>
-          {RouteManager(loggedIn, isAdmin)}
+          {RouteManager()}
       </Router>
     </>
   );
