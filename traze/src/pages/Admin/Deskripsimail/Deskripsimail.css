@@ -87,6 +87,7 @@
     align-items: left;
     text-align: left;
     font-size: 14px;
+    text-align: center;
 }
 
 .desmailcontainer-middlebody{
@@ -100,9 +101,13 @@
     flex-direction: column;
 }
 
+.desmailcontainer-middlebody > p{
+  padding-top: 10px;
+}
+
 .desmailcontainer-middlebody img{
-    width: 70vw;
-    max-width: 418px;
+    width: 60vw;
+    max-width: 350px;
 }
 
 

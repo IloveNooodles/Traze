@@ -3,7 +3,7 @@ import './Deskripsimail.css';
 import Mail from "../../../img/mail.png";
 import picture from "../../../img/facebook.png";
 import {Link} from'react-router-dom';
-import back from "../../../img/arrow.png";
+import back from "../../../img/backArrow.png";
 import reportlogo from "../../../img/report.png";
 
 function Deskripsimail() {
