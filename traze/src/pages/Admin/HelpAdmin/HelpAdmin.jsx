@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './HelpAdmin.css';
-import Helpimage from "../../img/help.png";
+import Helpimage from "../../../img/help.png";
 import { Link } from 'react-router-dom';
 
 const satu = () => {
