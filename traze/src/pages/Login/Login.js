@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { userHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import * as api from '../../api/index.js';
 import Logo from '../../img/logo.png';
 import Twit from '../../img/twit.png';
 import Google from '../../img/google.png';
 import Facebook from '../../img/facebook.png';
 import './Login.css';
-import { Link } from 'react-router-dom';
+
 
 async function loginUser(creds) {
-  return fetch('http://localhost:8000/login', {
+  return fetch('http://localhost:5000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
