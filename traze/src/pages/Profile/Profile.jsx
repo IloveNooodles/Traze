@@ -1,13 +1,24 @@
+import { useHistory, Link } from "react-router-dom";
+
 import "./Profile.css";
-import dummyImage from "../../img/facebook.png";
+import dummyImage from "../../img/default-profile.jpg";
 import Settings from "../../img/setting.png";
 import Exit from "../../img/exit.png";
 import Help from "../../img/help.png";
 import Layout from "../../Layout";
-import { Link } from "react-router-dom";
+
 
 const Profile = () => {
-  const name='Ziella'
+  const user = JSON.parse(localStorage.getItem('profile'));
+  const history = useHistory();
+
+  console.log(user);
+
+  const logout = () => {
+    localStorage.removeItem('profile');
+
+    history.go(0);
+  }
 
   return (
     <Layout>
@@ -19,9 +30,9 @@ const Profile = () => {
         </div>
         <div className="text-container-profile">
           <Link to='/editprofile'>
-            <h2>{name}</h2>
+            <h2>{user.result.name}</h2>
           </Link>
-          <p>2021 Points</p>
+          <p>{user.result.score} {user.result.score === 1 ? "point" : "points"}</p>
         </div>
         <div id="container-menu-wrapper">
           <Link to="/settings">
@@ -36,7 +47,7 @@ const Profile = () => {
               <p>Help</p>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/" onClick={logout}>
             <div className="menu-wrapper-profile">
               <img src={Exit} alt="" />
               <p>Logout</p>

@@ -20,22 +20,15 @@ import DeskripsiMail from "./pages/Admin/Deskripsimail/Deskripsimail";
 import ReportUser from "./pages/Admin/ReportUser/ReportUser";
 
 const RouteManager = () => {
-    const { userData, setUserData } = useState({
-      role: "",
-      username: "",
-      name: "",
-      password: "",
-      
-    });
+    const user = JSON.parse(localStorage.getItem('profile'));
+    const isAdmin = user?.result?.role === "officer"
     
-
-    const isAdmin = false;
-    const loggedIn = true;
-
-    if (!loggedIn) {
+    if (!user?.result) {
      return (
        <Switch>
-         <Route path="/" exact component={Login} setToken={(data) => setUserData(data)}/>
+         <Route path="/" exact > 
+          <Login />
+         </Route>
          <Route path="/register" component={Register} />
          <Route path="*">
            <Redirect to="/" />

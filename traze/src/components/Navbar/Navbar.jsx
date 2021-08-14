@@ -11,7 +11,8 @@ import "./Navbar.css";
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
-  const isAdmin = true;
+  const user = JSON.parse(localStorage.getItem('profile'));
+  const isAdmin = (user?.result?.role === "officer")
   const data = (isAdmin ? SidebarDataAdmin : SidebarData);
 
   return (

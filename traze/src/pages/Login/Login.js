@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { userHistory } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import * as api from '../../api/index.js';
@@ -11,27 +11,24 @@ import Facebook from '../../img/facebook.png';
 import './Login.css';
 
 
-async function loginUser(creds) {
-  return fetch('http://localhost:5000/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(creds),
-  }).then((data) => data.json());
-}
-
-const Login = ({ setToken }) => {
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+const Login = (props) => {
+  const [formData, setFormData] = useState({ username: "", password: "" });
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await loginUser({
-      username,
-      password,
-    });
-    setToken(token);
+    
+    try {
+      const res = await api.signIn(formData);
+
+      localStorage.setItem('profile', JSON.stringify(res.data));
+      
+      history.go(0);
+
+    } catch (error) {
+      console.log(error);
+      window.alert("Username atau passwod salah");
+    }
   };
 
   return (
@@ -44,12 +41,12 @@ const Login = ({ setToken }) => {
           </strong>
           <input
             type="text"
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => setFormData({...formData, username: e.target.value})}
             placeholder="Username"
           />
           <input
             type="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setFormData({...formData, password: e.target.value})}
             placeholder="Password"
           />
           <a href="#">Forgot password ?</a>
@@ -69,10 +66,6 @@ const Login = ({ setToken }) => {
       </p>
     </div>
   );
-};
-
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
 };
 
 export default Login;
