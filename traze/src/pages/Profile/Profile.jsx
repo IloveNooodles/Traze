@@ -12,8 +12,6 @@ const Profile = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const history = useHistory();
 
-  console.log(user);
-
   const logout = () => {
     localStorage.removeItem('profile');
 

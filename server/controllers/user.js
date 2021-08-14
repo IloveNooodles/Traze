@@ -5,7 +5,7 @@ import User from '../models/user.js';
 
 export const getLeaderboard = async (req, res) => {
     try {
-        const leaderboard = await User.find({}, ['username', 'score']);
+        const leaderboard = await User.find({role: "user"}, ['username', 'score']).sort({'score': -1});
 
         res.status(200).json(leaderboard);
     } catch (error) {
@@ -41,11 +41,11 @@ export const signin = async (req, res) => {
     try {
         const existingUser = await User.findOne({ username });
 
-        if (!existingUser) return res.status(400).json({ message: "Username atau password salah."})
+        if (!existingUser) return res.status(401).json({ message: "Username atau password salah."})
 
         const isPasswordCorrect = await bcrypt.compare(password, existingUser.password);
 
-        if (!isPasswordCorrect) return res.status(400).json({ message: "Username atau password salah."});
+        if (!isPasswordCorrect) return res.status(401).json({ message: "Username atau password salah."});
 
         const token = jwt.sign({ username: existingUser.username, id: existingUser._id }, 'traze', { expiresIn: "1h"})
 

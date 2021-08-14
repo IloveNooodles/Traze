@@ -1,28 +1,28 @@
 import "./LeaderboardScore.css";
-import dummyphoto from "../../img/facebook.png";
+import dummyphoto from "../../img/default-profile.jpg";
 
-const LeaderboardScore = () => {
-  const nameScoreboard = "Grace";
+const LeaderboardScore = ({firstThree}) => {
+  console.log(firstThree);
 
   return (
     <div className="scoreboard-wrapper">
       <div className="column">
         <img src={dummyphoto} alt="" />
-        <p>{nameScoreboard}</p>
+        <p>{firstThree[1].username}</p>
         <div className="row second">
           <p>2</p>
         </div>
       </div>
       <div className="column">
         <img src={dummyphoto} alt="" />
-        <p>{nameScoreboard}</p>
+        <p>{firstThree[0].username}</p>
         <div className="row">
           <p>1</p>
         </div>
       </div>
       <div className="column">
         <img src={dummyphoto} alt="" />
-        <p>{nameScoreboard}</p>
+        <p>{firstThree[2].username}</p>
         <div className="row first">
           <p>3</p>
         </div>

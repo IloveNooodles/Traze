@@ -4,12 +4,19 @@ import Settings from "../../../img/setting.png";
 import Exit from "../../../img/exit.png";
 import Help from "../../../img/help.png";
 import Layout from "../../../Layout";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const ProfileAdmin = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
+  const history = useHistory();
 
   const name = user.result.name;
+
+  const logout = () => {
+    localStorage.removeItem('profile');
+
+    history.go(0);
+  }
 
   return (
     <Layout>
@@ -38,7 +45,7 @@ const ProfileAdmin = () => {
               <p>Help</p>
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/" onClick={logout}>
             <div className="menu-wrapper-profile">
               <img src={Exit} alt="" />
               <p>Logout</p>

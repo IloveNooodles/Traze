@@ -1,6 +1,5 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import trashReport from '../models/trashReport.js';
 
 import TrashReport from '../models/trashReport.js';
 
@@ -42,6 +41,8 @@ export const createReport = async (req, res) => {
     }
 }
 
+
+// Ganti ke statusnya jadi solved
 export const deleteReport = async (req, res) => {
     const { id } = req.params;
 
