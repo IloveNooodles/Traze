@@ -2,6 +2,9 @@ import React from 'react';
 import './Deskripsimail.css';
 import Mail from "../../../img/mail.png";
 import picture from "../../../img/facebook.png";
+import {Link} from'react-router-dom';
+import back from "../../../img/arrow.png";
+import reportlogo from "../../../img/report.png";
 
 function Deskripsimail() {
     const Jalan = "Jalan Merdeka";
@@ -12,6 +15,18 @@ function Deskripsimail() {
 
     return (
         <div className="desmailcontainer">
+            <div className="desmailcontainer-header">
+                <div className="separator1">
+                    <Link to="/home">
+                        <img src={back}/>
+                    </Link>
+                </div>
+                <div className="separator2">
+                <Link to="/home">
+                        <img src={reportlogo}/>
+                    </Link>
+                </div>
+            </div>
             <div className="desmailcontainer-title">
                 <div id="circledesmailbig">
                     <div id="circledesmail">

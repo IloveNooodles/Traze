@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const satu = () => {
   return (
     <p>
-      1. Tekan tombol camera yang terdapat di samping search bar<br></br> 2.aku
-      sayang kamu <br></br> 3. aku sayang banget sama kamu :*
+      1. Tekan tombol camera yang terdapat di samping search bar<br></br> 2. tekan tombol merah ketika sudah berada di report page <br></br> 3. masukkan alamat dan juga keterangan tambahan (opsional) <br></br>
+       4. tekan tombol panah di bawah kanan, laporan berhasil dikirim!
     </p>
   );
 };
@@ -18,6 +18,14 @@ const dua = () => {
       Poin didapat dari melakukan pelaporan sampah. Poin akan otomatis bertambah
       setelah laporan sudah diverifikasi oleh pihak kami. Laporan yang tidak
       valid tidak akan menambahkan poin.
+    </p>
+  );
+};
+
+const tiga = () => {
+  return (
+    <p>
+      Poin yang didapat akan diakumulasikan. Poin yang didapat akan diranking dan ditampilkan pada scoreboard. tiga poin terbanyak akan memasuki podium.
     </p>
   );
 };
@@ -36,7 +44,7 @@ function Help() {
     },
     {
       topic: 'Apa keuntungan mendapatkan poin?',
-      answer: satu(),
+      answer: tiga(),
       open: false,
     },
   ]);
