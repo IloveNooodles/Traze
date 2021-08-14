@@ -1,4 +1,9 @@
 .settings {
+  background-color: #22477f;
+  color: white;
+}
+
+.settings-info {
   min-height: 100vh;
   background-color: #22477f;
   font-family: Poppins;
@@ -6,13 +11,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   color: white;
 }
 
 #setting {
   width: 128px;
   height: 128px;
+}
+
+#backArrow{
+  min-width: 100vw;
+  display: flex;
+  align-items: flex-start;
+}
+
+#backArrow img{
+  width: 36px;
+  padding-top: 4em;
+  padding-left: 2em;
 }
 
 .text {
