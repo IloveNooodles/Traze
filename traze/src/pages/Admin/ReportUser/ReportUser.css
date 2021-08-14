@@ -1,0 +1,100 @@
+.reportUser {
+  min-height: 100vh;
+  background-color: #ddd8c6;
+}
+
+.reportUser-container {
+  background-color: #072351;
+  position: relative;
+  width: 100vw;
+  height: 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reportUser-container > a img:first-child{
+  position: absolute;
+  left: 20px;
+  width: 30px;
+}
+
+.reportUser-container img:last-child {
+  width: 70px;
+  position: absolute;
+  top: 25%;
+}
+
+.reportUser-info {
+  display: flex;
+  align-items: center;
+}
+
+.reportUser-info {
+  display: flex;
+  justify-content: center;
+}
+
+.reportUser-info h1 {
+  padding-top: 10px;
+  text-align: center;
+  color: #072351;
+  word-spacing: 5px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.reportUser-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reportUser-desc img{
+  width: 65vw;
+}
+
+.reportUser-desc-text p {
+  font-size: 11px;
+}
+
+.reportUser-desc-text p{
+  margin: 0;
+  margin-left: 11px;
+}
+
+.reportUser-desc-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+.reportUser-desc h4{
+  padding-top: 10px;
+}
+
+.button-report-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-info-report {
+  align-content: center;
+  background-color: #EA4335;
+  width: 60vw;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.green-button{
+  background-color: #34A853;
+}

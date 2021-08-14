@@ -15,7 +15,8 @@ import HistoryAdmin from "./pages/Admin/History/HistoryAdmin";
 import Mail from "./pages/Admin/Mail/Mail";
 import ProfileAdmin from "./pages/Admin/Profile/Profile";
 import HelpAdmin from "./pages/Admin/HelpAdmin/HelpAdmin";
-import DeskripsiMail from "./pages/Admin/Deskripsimail/Deskripsimail"
+import DeskripsiMail from "./pages/Admin/Deskripsimail/Deskripsimail";
+import ReportUser from "./pages/Admin/ReportUser/ReportUser";
 
 function App() {
   // const [token, setToken] = useState();
@@ -41,6 +42,7 @@ function App() {
           <Route path="/editprofile" component={EditProfile} />
           <Route path="/settings" component={Settings} />
           <Route path="/maildesc" component={DeskripsiMail} />
+          <Route path="/reportuser" component={ReportUser} />
           <Route path="*" component={page404} />
         </Switch>
       </Router>

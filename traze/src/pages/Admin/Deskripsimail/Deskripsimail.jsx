@@ -22,8 +22,8 @@ function Deskripsimail() {
                     </Link>
                 </div>
                 <div className="separator2">
-                <Link to="/home">
-                        <img src={reportlogo}/>
+                <Link to="/reportuser">
+                        <img src={reportlogo} id='reportlogo'/>
                     </Link>
                 </div>
             </div>
