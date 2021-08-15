@@ -54,8 +54,6 @@
   padding: 8px;
   margin-top: 5px;
   color: #ddd8c6;
-  padding-left: 15px;
-  margin-right: 10px;
   border: 1px white solid;
 }
 
@@ -64,7 +62,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .editbtn {
@@ -78,4 +76,67 @@
   color: #072351;
   text-align: center;
   margin-top: 0;
+}
+
+@media all and (min-width:768px) {
+  .editprofile {
+    min-height: 100vh;
+    background-color: #22477f;
+    align-items: center;
+    justify-content: center;
+  }
+  .edit-container {
+    background-color: #ddd8c6;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:650px;
+    height: 350px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30vh;
+  }
+
+  .pemisah{
+    margin-right: 100px;
+  }
+
+  .editprofile h1 {
+    display: none;
+  }
+
+  .editprofile-container {
+    color: #072351;
+  }
+
+  .editprofile-container > p{
+    font-weight: 1000;
+  }
+
+  .editprofile-input {
+    color: #072351;
+  }
+
+  .form-editprofile:focus,
+  .form-editprofile:active {
+    outline: 0;
+    color: #22477f;
+  }
+
+  .form-editprofile {
+    background-color: #ddd8c6;
+    color: #072351;
+    width: 250px;
+    border: 3px solid #22477f;
+  }
+
+  .editbtn{
+    width: 275px;
+    background-color: #22477F;
+  }
+
+  .editbtn p {
+    color: #ddd8c6;
+  }
 }

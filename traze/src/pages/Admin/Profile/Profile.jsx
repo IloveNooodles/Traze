@@ -21,16 +21,18 @@ const ProfileAdmin = () => {
   return (
     <Layout>
       <div className="myProfile">
-        <div className="container-shape">
-          <div id="circle">
-            <img src={dummyImage} alt="" />
+        <div className="profilecontainer">
+          <div className="container-shape">
+            <div id="circle">
+              <img src={dummyImage} alt="" />
+            </div>
           </div>
-        </div>
-        <div className="text-container-profile">
-          <Link to="/editprofile">
-            <h2>{name}</h2>
-          </Link>
-          <p>Officer</p>
+          <div className="text-container-profile">
+            <Link to="/editprofile">
+              <h2>{name}</h2>
+            </Link>
+            <p>Officer</p>
+          </div>
         </div>
         <div id="container-menu-wrapper">
           <Link to="/settings">

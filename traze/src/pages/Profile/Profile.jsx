@@ -21,16 +21,18 @@ const Profile = () => {
   return (
     <Layout>
       <div className="myProfile">
-        <div className="container-shape">
-          <div id="circle">
-            <img src={dummyImage} alt="" />
+      <div className="profilecontainer">
+          <div className="container-shape">
+            <div id="circle">
+              <img src={dummyImage} alt="" />
+            </div>
           </div>
-        </div>
-        <div className="text-container-profile">
-          <Link to='/editprofile'>
-            <h2>{user.result.name}</h2>
-          </Link>
-          <p>{user.result.score} {user.result.score === 1 ? "point" : "points"}</p>
+          <div className="text-container-profile">
+            <Link to='/editprofile'>
+              <h2>{user.result.name}</h2>
+            </Link>
+            <p>{user.result.score} {user.result.score === 1 ? "point" : "points"}</p>
+          </div>
         </div>
         <div id="container-menu-wrapper">
           <Link to="/settings">

@@ -42,3 +42,20 @@
   width: 60px;
   height: 70px;
 }
+
+@media all and (min-width: 768px) {
+  .row{
+    width: 70px;
+    height: 107px;
+  }
+
+  .first{
+    width: 70px;
+    height: 70px;
+  }
+
+  .second {
+    width: 70px;
+    height: 88px;
+  }
+}

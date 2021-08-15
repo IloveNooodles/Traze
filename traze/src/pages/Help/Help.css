@@ -14,6 +14,7 @@
 
 .container-help-body {
     width: 80vw;
+    min-width: 300px;
     height: 55vh;
     border-radius: 1em;
     background-color: #22477f;

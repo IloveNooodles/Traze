@@ -9,3 +9,18 @@
 .leaderboard h2{
   text-align: center;
 }
+
+@media all and (min-width:768px){
+  .leaderboard h2{
+    display: none;
+  }
+  .leaderboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .leaderboard-separator{
+    margin-right: 100px;
+  }
+}
