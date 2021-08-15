@@ -14,7 +14,6 @@ const Navbar = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const isAdmin = (user?.result?.role === "officer")
   const data = (isAdmin ? SidebarDataAdmin : SidebarData);
-
   return (
     <div className="nav-wrap">
       <div className="img-wrap">
