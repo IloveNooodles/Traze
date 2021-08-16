@@ -1,0 +1,45 @@
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9;
+}
+
+#searchbar:focus,
+#searchbar:active {
+  outline: 0;
+  color: #ddd8c6;
+
+}
+
+#searchbar {
+  background-color: #072351;
+  border-radius: 20px;
+  width: 70vw;
+  padding: 8px;
+  margin-top: 5px;
+  color: #ddd8c6;
+  padding-left: 15px;
+  margin-right: 10px;
+  border: 1px white solid;
+}
+
+.camera-wrapper{
+  display: flex;
+  justify-content: center;
+  background-color: #072351;
+  border-radius: 50px;
+  align-content: center;
+  padding: 5px;
+}
+
+.camera-wrapper img{
+  width: 30px;
+}
+
+.camera-wrapper img:hover{
+  cursor: pointer;
+}
+
+

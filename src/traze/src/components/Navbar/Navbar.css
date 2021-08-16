@@ -1,0 +1,95 @@
+.nav-wrap {
+  background-color: #072351;
+  font-family: Poppins;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.img-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrap img {
+  width: 100px;
+}
+
+#logoTraze {
+  margin-left: 2em;
+}
+
+#hamicon {
+  width: 24px;
+  padding-right: 1em;
+}
+
+.logo-admin {
+  width: 100px;
+  height: 70px;
+}
+
+.menu-bars {
+  margin-left: 1em;
+  font-size: 2em;
+  background: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nav-menu {
+  width: 175px;
+  background-color: #1b345c;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+
+  right: -100%;
+  transition: 800ms;
+}
+
+.active {
+  right: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  list-style: none;
+  height: 60px;
+}
+.nav-text a {
+  text-decoration: none;
+  color: #ddd8c6;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #22477f;
+}
+
+.nav-menu-items{
+  padding: 5px;
+}
+
+.nav-menu-items a{
+  padding: 3px;
+}
+
+.editnavbar{
+  margin-right: 50px;
+}

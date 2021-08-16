@@ -1,0 +1,33 @@
+.text-history-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom:  10px;
+}
+
+.text-info-history {
+  width: 250px;
+  background-color: #ddd8c6;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.text-info-history p {
+  margin: 0 0 0 1em;
+  color: #072351;
+}
+
+.text-info-history:not(:first-child) > .text-top {
+  padding: 0;
+}
+
+.text-top {
+  padding-top: 0.5em;
+}
+
+.haritanggal-info {
+  display: flex;
+}
+
+.haritanggal-info p {
+  margin: 0 0 0 1em;
+}

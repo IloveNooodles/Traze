@@ -1,0 +1,96 @@
+.helpadminpage {
+  min-height: 100vh;
+  background-color: #22477f;
+  font-family: Poppins;
+  color: #ddd8c6;
+  padding-top: 5em;
+}
+
+.container-helpadmin-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-helpadmin-body {
+  width: 80vw;
+  height: 55vh;
+  border-radius: 1em;
+  background-color: #22477f;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+.container-helpadmin-back {
+  width: 80vw;
+  height: 20vh;
+  background-color: #22477f;
+  margin: 0 auto;
+}
+
+.container-helpadmin-back a {
+  padding-left: 20px;
+  color: #ddd8c6;
+  text-decoration: none;
+}
+
+.container-helpadmin-body .helpadmin {
+  margin: 15px;
+  padding: 15px;
+  background-color: #ddd8c6;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: #072351;
+}
+
+.container-helpadmin-body .helpadmin .helpadmin-topic {
+  position: relative;
+  font-size: 1em;
+  padding-right: 80px;
+  transition: all 0.4s ease;
+}
+
+.container-helpadmin-body .helpadmin .helpadmin-topic::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+
+  transition: all 0.4s ease-out;
+}
+
+.container-helpadmin-body .helpadmin .helpadmin-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.container-helpadmin-body .helpadmin.open .helpadmin-topic {
+  margin-bottom: 15px;
+}
+
+.container-helpadmin-body .helpadmin.open .helpadmin-topic::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.container-helpadmin-body .helpadmin.open .helpadmin-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+#imageadmin {
+  padding-top: 1em;
+}
+
+@media (min-width: 768px){
+  .container-helpadmin-body {
+      width: 60vw;
+  }
+  .container-helpadmin-back {
+    width: 60vw;
+  }
+}

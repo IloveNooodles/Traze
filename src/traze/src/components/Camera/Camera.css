@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #22477f;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(fit-content+20px);
+}
+
+.resultVideo {
+  width: fit-content;
+  height: 570px;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  background: #072351;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.takepicture {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.red-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ea4335;
+}
+
+.green-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #29e019;
+}

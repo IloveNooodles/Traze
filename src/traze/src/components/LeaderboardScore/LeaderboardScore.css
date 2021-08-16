@@ -1,0 +1,61 @@
+.scoreboard-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; 
+  margin-left: 1em; 
+}
+
+.column img {
+  width: 48px;
+}
+
+.column p{
+  margin: 0;
+  text-align: center;
+}
+
+.row{
+  width: 60px;
+  height: 80px;
+  background-color: #DDD8C6;
+  border-radius: 8px;
+}
+
+.row p{
+  color: #072351;
+  font-size: 3em;
+}
+
+.first{
+  width: 60px;
+  height: 60px;
+}
+
+.second {
+  width: 60px;
+  height: 70px;
+}
+
+@media all and (min-width: 768px) {
+  .row{
+    width: 70px;
+    height: 107px;
+  }
+
+  .first{
+    width: 70px;
+    height: 70px;
+  }
+
+  .second {
+    width: 70px;
+    height: 88px;
+  }
+}

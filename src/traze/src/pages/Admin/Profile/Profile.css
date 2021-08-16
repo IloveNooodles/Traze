@@ -1,0 +1,136 @@
+.myProfile {
+  min-height: 100vh;
+  background-color: #22477f;
+  font-family: Poppins;
+  padding-top: 5em;
+}
+
+.container-shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#circle {
+  width: 150px;
+  height: 150px;
+  background-color: #254b7d;
+  border-radius: 50%;
+  margin-top: 0.8em;
+  margin-bottom: 0;
+}
+
+#circle > img {
+  width: 100px;
+  height: 100px;
+  margin: 25px 25px;
+  border-radius: 50%;
+}
+
+.text-container-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-container-profile h2 {
+  margin: 0;
+}
+
+.text-container-profile a {
+  text-decoration: none;
+  color: #ddd8c6;
+  margin: 0;
+}
+
+.text-container-profile > p {
+  margin: 0;
+  color: #ddd8c6;
+  font-size: 1.2em;
+}
+
+#container-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -8%;
+  left: 8%;
+}
+
+#container-menu-wrapper img {
+  width: 2em;
+  height: 2em;
+}
+
+.menu-wrapper-profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-wrapper-profile > p {
+  margin-top: 0.2em;
+  padding: 0 1em;
+  color: #ddd8c6;
+}
+
+@media all and (min-width:768px) {
+  .myProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .myProfile > .profilecontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 510px;
+    height: 262px;
+    background-color: #DDD8C6;
+    border-radius: 10px;
+  }
+  .container-shape{
+    margin-right: 20px;
+  }
+
+  .profilecontainer > .text-container-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-container-profile a {
+    text-decoration: none;
+    color: #072351;
+    margin: 0;
+  }
+
+  .text-container-profile > p {
+    margin: 0;
+    color: #072351;
+    font-size: 1.2em;
+  }
+
+  #circle {
+    width: 195px;
+    height: 195px;
+    background-color: #254b7d;
+    border-radius: 50%;
+  }
+  
+  #circle > img {
+    width: 180px;
+    height: 180px;
+    margin: 7.5px 7.5px;
+    border-radius: 50%;
+  }
+
+  #container-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-left: 70px;
+  }
+}
