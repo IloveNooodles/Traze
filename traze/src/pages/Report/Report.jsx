@@ -17,6 +17,7 @@ const Report = ({ coord }) => {
   });
 
   const [coordinates, setCoordinates] = useState([]);
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     setCoordinates(coord);
@@ -40,7 +41,7 @@ const Report = ({ coord }) => {
         <strong>
           <h1>Report</h1>
         </strong>
-        <Camera />
+        <Camera image={image} setImage={setImage}/>
         <div className="form-report">
           <form onSubmit={handleSubmit}>
             <input
