@@ -90,66 +90,6 @@
     background-color: #DDD8C6;
     border-radius: 10px;
   }
-
-  .profilecontainer > .text-container-profile{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .text-container-profile a {
-    text-decoration: none;
-    color: #072351;
-    margin: 0;
-  }
-
-  .text-container-profile > p {
-    margin: 0;
-    color: #072351;
-    font-size: 1.2em;
-  }
-
-  #circle {
-    width: 195px;
-    height: 195px;
-    background-color: #254b7d;
-    border-radius: 50%;
-  }
-  
-  #circle > img {
-    width: 180px;
-    height: 180px;
-    margin: 7.5px 7.5px;
-    border-radius: 50%;
-  }
-
-  #container-menu-wrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 0;
-    left: 6%;
-  }
-}
-
-@media all and (min-width:768px) {
-  .myProfile {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .myProfile > .profilecontainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    width: 510px;
-    height: 262px;
-    background-color: #DDD8C6;
-    border-radius: 10px;
-  }
   .container-shape{
     margin-right: 20px;
   }

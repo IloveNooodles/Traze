@@ -21,7 +21,7 @@ const Profile = () => {
   return (
     <Layout>
       <div className="myProfile">
-      <div className="profilecontainer">
+        <div className="profilecontainer">
           <div className="container-shape">
             <div id="circle">
               <img src={dummyImage} alt="" />
