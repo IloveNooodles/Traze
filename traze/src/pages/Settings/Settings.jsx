@@ -14,8 +14,8 @@ const Settings = () => {
         <h4 className="text">Submit Feedback</h4> <br />
         <h4 className="text">Clear History</h4>
       </div>
-      <div id='backArrow'>
-        <Link to='/home'>
+      <div id="backArrow">
+        <Link to="/profile">
           <img src={backArrow} alt="" />
         </Link>
       </div>
