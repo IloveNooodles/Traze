@@ -15,6 +15,7 @@ const Leaderboard = () => {
       .then(res => {
         setLeaderboard(res.data);
       })
+      .catch(error => console.log(error));
   }, [])
 
   return (

@@ -2,6 +2,10 @@ import "./Report.css";
 import Layout from "../../Layout";
 import Camera from "../../components/Camera/Camera";
 import { useState, useEffect } from "react";
+import axios from 'axios';
+import * as api from '../../api/index.js';
+
+const API_TOKEN = "pk.eyJ1IjoiaWxvdmVub29kbGVzIiwiYSI6ImNrc2NtMDNhazBpNGMyd3FrcmducWkxZTIifQ.rO0c2UpYlVFjmOt8gkUdaQ";
 
 const Report = ({ coord }) => {
   const [formData, setFormData] = useState({
@@ -12,26 +16,39 @@ const Report = ({ coord }) => {
       type: "Point",
       coordinates: [],
     },
-    streetAddress: "",
+    address: "",
     image: "",
   });
 
-  const [coordinates, setCoordinates] = useState([]);
   const [image, setImage] = useState("");
 
   useEffect(() => {
-    setCoordinates(coord);
-    console.log(coord);
+    const { result } = JSON.parse(localStorage.getItem('profile'));
+
+    
+    axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${coord[0]},${coord[1]}.json?access_token=${API_TOKEN}`)
+      .then((res) => {
+        setFormData({
+          ...formData, 
+          address: res.data.features[0].place_name, 
+          username: result.username,
+          location: {
+            type: "Point", 
+            coordinates: coord
+          },
+        });
+      })
+      .catch(error => console.log(error));
   }, [coord])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // const res = await api
+      console.log({...formData, image: image});
+      api.createReport({...formData, image: image});
     } catch (error) {
-      console.log(error.response);
-      window.alert("Teliti kembali data form Anda.");
+      console.log(error.message);
     }
   };
 
