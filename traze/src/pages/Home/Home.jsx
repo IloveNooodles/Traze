@@ -3,11 +3,11 @@ import pinpointImg from "../../img/pinpoint.png";
 import Layout from "../../Layout";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import * as dataSampah from "../../data/sampah.json";
 
-const Home = () => {
+const Home = ({ coord }) => {
   const [viewport, setViewport] = useState({
     latitude: -6.905977,
     longitude: 107.613144,
@@ -17,6 +17,10 @@ const Home = () => {
   });
 
   const [selectedLocation, setSelectedLocation] = useState(null);
+
+  useEffect(() => {
+    coord([viewport.longitude, viewport.latitude]);
+  }, [viewport]);
 
   return (
     <Layout>
