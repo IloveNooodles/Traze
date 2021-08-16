@@ -2,10 +2,16 @@ import "./Home.css";
 import pinpointImg from "../../img/pinpoint.png";
 import Layout from "../../Layout";
 import Searchbar from "../../components/Searchbar/Searchbar";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import ReactMapGL, { Marker, Popup, GeolocateControl} from "react-map-gl";
 import { useState } from "react";
 
 import * as dataSampah from "../../data/sampah.json";
+
+
+const geolocateControlStyle={
+  right: 10,
+  top: 10
+};
 
 const Home = () => {
   const [viewport, setViewport] = useState({
@@ -28,6 +34,12 @@ const Home = () => {
           mapStyle="mapbox://styles/ilovenoodles/ckscxwr801t9417uqn500n3t2"
           mapboxApiAccessToken="pk.eyJ1IjoiaWxvdmVub29kbGVzIiwiYSI6ImNrc2NtMDNhazBpNGMyd3FrcmducWkxZTIifQ.rO0c2UpYlVFjmOt8gkUdaQ"
         >
+          <GeolocateControl 
+            style={geolocateControlStyle}
+            positionOptions={{enableHighAccuracy: true}}
+            trackUserLocation={true}
+            auto
+          />
           {dataSampah.listSampah.map((item, index) => (
             <Marker
               key={index}
