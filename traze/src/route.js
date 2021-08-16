@@ -62,7 +62,9 @@ const RouteManager = () => {
             <Home coord={handleCoordinates} />
          </Route>
          <Route path="/help" component={isAdmin ? HelpAdmin : Help} />
-         <Route path="/report" component={Report} />
+         <Route path="/report" >
+            <Report coord={coordinates} />
+         </Route>
          <Route path="/editprofile" component={EditProfile} />
          <Route path="/settings" component={Settings} />
          <Route path="/maildesc" component={DeskripsiMail} />
