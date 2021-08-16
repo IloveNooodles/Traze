@@ -9,8 +9,8 @@ import * as dataSampah from "../../data/sampah.json";
 
 
 const geolocateControlStyle={
-  right: 10,
-  top: 10
+  right: 20,
+  top: 20,
 };
 
 const Home = () => {

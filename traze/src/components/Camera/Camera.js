@@ -35,7 +35,7 @@ const WebcamCapture = () => {
           <img className="resultVideo" src={image} />
         )}
       </div>
-      <div>
+      <div className='takepicture'>
         {image != "" ? (
           <button
             onClick={(e) => {
