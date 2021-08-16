@@ -45,7 +45,6 @@ const Report = ({ coord }) => {
     e.preventDefault();
 
     try {
-      console.log({...formData, image: image});
       api.createReport({...formData, image: image});
     } catch (error) {
       console.log(error.message);

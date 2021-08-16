@@ -7,7 +7,7 @@ const router = express.Router();
 
 export const getLocations = async (req, res) => {
     try {
-        const locations = await TrashReport.find({}, 'location');
+        const locations = await TrashReport.find({});
 
         res.status(200).json(locations);
     } catch (error) {

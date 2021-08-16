@@ -5,7 +5,9 @@ import Searchbar from "../../components/Searchbar/Searchbar";
 import ReactMapGL, { Marker, Popup, GeolocateControl } from "react-map-gl";
 import { useState, useEffect } from "react";
 
+import * as api from '../../api/index.js';
 import * as dataSampah from "../../data/sampah.json";
+import moment from 'moment';
 
 const geolocateControlStyle={
   right: 20,
@@ -21,11 +23,29 @@ const Home = ({coord}) => {
     zoom: 12,
   });
 
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState({title: "", location: {coordinates: [0, 0], _id: 0}});
+  const [data, setData] = useState([]);
+  // const [report, setReport] = useState({title: "", location: {coordinates: [0, 0], _id: 0}});
 
   useEffect(() => {
     coord([viewport.longitude, viewport.latitude]);
   }, [viewport]);
+
+  // useEffect(() => {
+  //   api.getReport(selectedLocation._id)
+  //     .then((res) => {
+  //       console.log(res);
+  //       setReport(res);
+  //     })
+  // }, [selectedLocation]);
+
+  useEffect(() => {
+    api.getLocations()
+      .then((res) => {
+        setData(res.data);
+        console.log(res.data);
+      })
+  }, [])
 
   return (
     <Layout>
@@ -43,9 +63,9 @@ const Home = ({coord}) => {
             trackUserLocation={true}
             auto
           />
-          {dataSampah.listSampah.map((item, index) => (
+          {data.map((item) => (
             <Marker
-              key={index}
+              key={item._id}
               latitude={item.location.coordinates[1]}
               longitude={item.location.coordinates[0]}
             >
@@ -65,13 +85,15 @@ const Home = ({coord}) => {
               latitude={selectedLocation.location.coordinates[1]}
               longitude={selectedLocation.location.coordinates[0]}
               onClose={() =>{
-                setSelectedLocation(null)
+                setSelectedLocation({location: {coordinates: [0, 0], _id: 0}})
               }}
             >
               <div className='popup-maps'>
                 <h2>{selectedLocation.title}</h2>
+                <p className='bottom-text-desc'>At: {selectedLocation.address?.split(",")[0]}</p>
                 <p className='center-text-desc'>{selectedLocation.desc}</p>
                 <p className='bottom-text-desc'>reported by: {selectedLocation.username}</p>
+                <p className='bottom-text-desc'>reported {moment(selectedLocation.createdAt).fromNow()}</p>
               </div>
             </Popup>
           ) : null}
