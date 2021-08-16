@@ -1,5 +1,5 @@
 import { Route, Redirect, Switch } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
@@ -20,8 +20,18 @@ import DeskripsiMail from "./pages/Admin/Deskripsimail/Deskripsimail";
 import ReportUser from "./pages/Admin/ReportUser/ReportUser";
 
 const RouteManager = () => {
+    const [coordinates, setCoordinates] = useState([]);
+
     const user = JSON.parse(localStorage.getItem('profile'));
-    const isAdmin = user?.result?.role === "officer"
+    const isAdmin = user?.result?.role === "officer";
+
+    // useEffect(() => {
+    //   console.log(coordinates);
+    // }, [coordinates]);
+
+    const handleCoordinates = (c) => {
+      setCoordinates(c);
+    }
     
     if (!user?.result) {
      return (
@@ -48,9 +58,13 @@ const RouteManager = () => {
          <Route path="/leaderboard" component={Leaderboard} />
          <Route path="/profile" component={isAdmin ? ProfileAdmin : Profile} />
          <Route path="/mail" component={Mail} />
-         <Route path="/home" component={Home} />
+         <Route path="/home" > 
+            <Home coord={handleCoordinates} />
+         </Route>
          <Route path="/help" component={isAdmin ? HelpAdmin : Help} />
-         <Route path="/report" component={Report} />
+         <Route path="/report" >
+            <Report coord={coordinates} />
+         </Route>
          <Route path="/editprofile" component={EditProfile} />
          <Route path="/settings" component={Settings} />
          <Route path="/maildesc" component={DeskripsiMail} />

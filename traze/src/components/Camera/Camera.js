@@ -10,8 +10,7 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-const WebcamCapture = () => {
-  const [image, setImage] = useState("");
+const WebcamCapture = ({ image, setImage }) => {
   const webcamRef = React.useRef(null);
 
   const capture = React.useCallback(() => {
@@ -35,7 +34,7 @@ const WebcamCapture = () => {
           <img className="resultVideo" src={image} />
         )}
       </div>
-      <div>
+      <div className="takepicture">
         {image != "" ? (
           <button
             onClick={(e) => {

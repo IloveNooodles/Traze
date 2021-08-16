@@ -1,21 +1,14 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-color: #072351;
+  background-color: #22477f;
   align-items: center;
   justify-content: center;
-  /* min-height: 100vh; */
-  /* border-radius: 5%; */
-  height: 569.59px;
-}
-
-.video video {
-  margin-top: 10px;
-  padding: 10px;
+  min-height: calc(fit-content+20px);
 }
 
 .resultVideo {
-  width: 390px;
+  width: fit-content;
   height: 570px;
   margin-top: 10px;
 }
@@ -26,12 +19,15 @@
   border-radius: 50%;
   border: 0.5px solid white;
   background: #072351;
-  display: grid;
-  position: absolute;
-  bottom: 30px;
-  right: 175px;
-  text-align: center;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.takepicture {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .red-circle {

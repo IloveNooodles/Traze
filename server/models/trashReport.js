@@ -19,6 +19,7 @@ const trashReport = mongoose.Schema({
         type: Date,
         default: new Date()
     },
+    address: String,
     image: {type: String, required: true}
 })
 
