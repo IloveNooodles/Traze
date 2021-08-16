@@ -21,17 +21,15 @@ function Deskripsimail() {
                         <img src={back}/>
                     </Link>
                 </div>
-                <div className="separator2">
-                <Link to="/reportuser">
-                        <img src={reportlogo} id='reportlogo'/>
-                    </Link>
-                </div>
-            </div>
-            <div className="desmailcontainer-title">
                 <div id="circledesmailbig">
                     <div id="circledesmail">
                         <img src={Mail}/>
                     </div>
+                </div>
+                <div className="separator2">
+                    <Link to="/reportuser">
+                        <img src={reportlogo} id='reportlogo'/>
+                    </Link>
                 </div>
             </div>
             <div className="desmailcontainer-upperbody">

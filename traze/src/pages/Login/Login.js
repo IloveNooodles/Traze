@@ -33,37 +33,41 @@ const Login = (props) => {
 
   return (
     <div className="login-wrapper">
-      <img src={Logo} alt="" id="logotraze" />
-      <form onSubmit={handleSubmit}>
-        <div className="form-wrapper">
-          <strong>
-            <h2 className="judul">Sign In</h2>
-          </strong>
-          <input
-            type="text"
-            onChange={(e) => setFormData({...formData, username: e.target.value})}
-            placeholder="Username"
-          />
-          <input
-            type="password"
-            onChange={(e) => setFormData({...formData, password: e.target.value})}
-            placeholder="Password"
-          />
-          <a href="#">Forgot password ?</a>
-          <button type="submit" className="submit">
-            Login
-          </button>
-        </div>
-      </form>
-      <p>Or login with</p>
-      <div className="logo-wrapper">
-        <img src={Twit} alt="" />
-        <img src={Google} alt="" />
-        <img src={Facebook} alt="" />
+      <div>
+        <img src={Logo} alt="" id="logotraze" />
       </div>
-      <p>
-        Don't have account? <Link to="/register">Sign Up Now</Link>
-      </p>
+      <div className="penengah">
+        <form onSubmit={handleSubmit}>
+          <div className="form-wrapper">
+            <strong>
+              <h2 className="judul">Sign In</h2>
+            </strong>
+            <input
+              type="text"
+              onChange={(e) => setFormData({...formData, username: e.target.value})}
+              placeholder="Username"
+            />
+            <input
+              type="password"
+              onChange={(e) => setFormData({...formData, password: e.target.value})}
+              placeholder="Password"
+            />
+            <a href="#">Forgot password ?</a>
+            <button type="submit" className="submit">
+              Login
+            </button>
+          </div>
+        </form>
+        <p>Or login with</p>
+        <div className="logo-wrapper">
+          <img src={Twit} alt="" />
+          <img src={Google} alt="" />
+          <img src={Facebook} alt="" />
+        </div>
+        <p>
+          Don't have account? <Link to="/register">Sign Up Now</Link>
+        </p>
+      </div>
     </div>
   );
 };

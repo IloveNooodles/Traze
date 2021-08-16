@@ -75,7 +75,6 @@ const Home = ({coord}) => {
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedLocation(item);
-                  console.log("GARE");
                 }}
               />
             </Marker>

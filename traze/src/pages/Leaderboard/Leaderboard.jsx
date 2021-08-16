@@ -22,8 +22,12 @@ const Leaderboard = () => {
     <Layout>
       <div className="leaderboard">
         <h2>Leaderboard</h2>
+        <div className="leaderboard-separator">
         {leaderboard.length === 0 ? <></> : <LeaderboardScore firstThree={leaderboard.slice(0, 3)}></LeaderboardScore>}
+        </div>
+        <div>
         {leaderboard.map((el, i) => <LeaderboardData key={el._id} name={el.username} rank={i+1} score={el.score}/>)}
+        </div>
       </div>
     </Layout>
   );

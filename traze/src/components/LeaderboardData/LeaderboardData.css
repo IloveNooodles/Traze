@@ -30,3 +30,9 @@
 .active-user p{
   color: #DDD8C6; 
 }
+
+@media screen {
+  .name-container{
+    width: 350px;
+  }
+}

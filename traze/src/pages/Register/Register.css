@@ -16,12 +16,20 @@ body {
   color: #4099e0;
 }
 
+.penengah{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .form-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   width: 50vw;
+  min-width: 250px;
 }
 
 .form-wrapper input {
@@ -45,7 +53,7 @@ body {
 
 .submit {
   border-radius: 10px;
-  width: 100%;
+  width: 106%;
   padding: 5px;
   background-color: #ddd8c6;
 }
@@ -56,6 +64,8 @@ body {
 
 .logo-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
 }
 
@@ -77,6 +87,30 @@ h4 {
 
 .img-wrapper {
   margin-bottom: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .login-wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-wrapper input {
+    border-radius: 10px;
+    width: 80%;
+    padding: 5px;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+  }
+
+  .form-wrapper {
+    width: 500px;
+  }
+
+  .submit {
+    width: 82%;
+  }
 }
 
 /* .img-wrap > img {

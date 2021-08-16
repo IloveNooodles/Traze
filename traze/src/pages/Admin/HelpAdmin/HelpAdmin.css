@@ -85,3 +85,12 @@
 #imageadmin {
   padding-top: 1em;
 }
+
+@media (min-width: 768px){
+  .container-helpadmin-body {
+      width: 60vw;
+  }
+  .container-helpadmin-back {
+    width: 60vw;
+  }
+}
